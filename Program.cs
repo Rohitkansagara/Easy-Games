@@ -107,9 +107,9 @@ public static class Program
             dbContext.Database.Migrate();
         }
 
-        // -------------------------------
+        // --------------------------------
         // Middleware pipeline
-        // -------------------------------
+        // --------------------------------
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
