@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EasyGames.Class\**" />
+    <Compile Remove="EasyGamesServices\**" />
+    <Content Remove="EasyGames.Class\**" />
+    <Content Remove="EasyGamesServices\**" />
+    <EmbeddedResource Remove="EasyGames.Class\**" />
+    <EmbeddedResource Remove="EasyGamesServices\**" />
+    <None Remove="EasyGames.Class\**" />
+    <None Remove="EasyGamesServices\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EasyGames.Class">
+      <HintPath>EasyGames.Class\bin\Debug\net8.0\EasyGames.Class.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyGames.Services">
+      <HintPath>EasyGamesServices\bin\Debug\net8.0\EasyGames.Services.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
